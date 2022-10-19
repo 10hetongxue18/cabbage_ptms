@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbStuInfoMapper">
+
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbStuInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="age" column="age" jdbcType="INTEGER"/>
+            <result property="dateBirth" column="dateBirth" jdbcType="DATE"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="stuId" column="stuId" jdbcType="VARCHAR"/>
+            <result property="school" column="school" jdbcType="VARCHAR"/>
+            <result property="faculty" column="faculty" jdbcType="VARCHAR"/>
+            <result property="major" column="major" jdbcType="VARCHAR"/>
+            <result property="grade" column="grade" jdbcType="VARCHAR"/>
+            <result property="classes" column="classes" jdbcType="VARCHAR"/>
+            <result property="schTeaId" column="schTeaId" jdbcType="INTEGER"/>
+            <result property="entTeaId" column="entTeaId" jdbcType="INTEGER"/>
+            <result property="userRole" column="userRole" jdbcType="INTEGER"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,gender,
+        age,dateBirth,phone,
+        email,stuId,school,
+        faculty,major,grade,
+        classes,schTeaId,entTeaId,
+        userRole,createTime,updateTime,
+        remarks
+    </sql>
+</mapper>

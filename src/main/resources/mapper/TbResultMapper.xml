@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbResultMapper">
+
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbResult">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="reportId" column="reportId" jdbcType="BIGINT"/>
+            <result property="score" column="score" jdbcType="VARCHAR"/>
+            <result property="appraise" column="appraise" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reportId,score,
+        appraise,createTime,updateTime,
+        remarks
+    </sql>
+</mapper>

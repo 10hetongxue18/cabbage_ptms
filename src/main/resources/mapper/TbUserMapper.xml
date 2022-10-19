@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbUserMapper">
+
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbUser">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userName" column="userName" jdbcType="VARCHAR"/>
+            <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>
+            <result property="userPassword" column="userPassword" jdbcType="VARCHAR"/>
+            <result property="avatarUrl" column="avatarUrl" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="userRole" column="userRole" jdbcType="INTEGER"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,userName,userAccount,
+        userPassword,avatarUrl,gender,
+        phone,email,userRole,
+        isDelete,createTime,updateTime,
+        remarks
+    </sql>
+</mapper>

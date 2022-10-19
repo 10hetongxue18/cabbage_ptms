@@ -1,4 +1,4 @@
-package cn.xiaobaicai.cabbage_ptms_backend.domain.request;
+package cn.xiaobaicai.cabbage_ptms_backend.model.domain.request;
 
 import lombok.Data;
 

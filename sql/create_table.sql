@@ -36,7 +36,7 @@ create table if not exists tb_stu_info
     faculty    varchar(128)                           null comment '院系',
     major      varchar(128)                           null comment '专业',
     grade      varchar(128)                           null comment '年级',
-    class      varchar(128)                           null comment '班级',
+    classes      varchar(128)                           null comment '班级',
     schTeaId   int                                    null comment '校内指导老师id',
     entTeaId   int                                    null comment '企业指导老师id',
     userRole   int          default 0                 not null comment '用户角色 0-学生 1-老师 2-管理员',
@@ -162,6 +162,50 @@ create table tb_area
     remarks    varchar(128)                       null comment '备注'
 )
     comment '实习基地表';
+
+-- auto-generated definition
+create table tb_news
+(
+    id         bigint auto_increment comment 'id'
+        primary key,
+    postName   varchar(100)                       not null comment '岗位名称',
+    message    varchar(1024)                      not null comment '实习信息',
+    areaId     int                                not null comment '实习基地id',
+    createTime datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    updateTime datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    remarks    varchar(128)                       null comment '备注'
+)
+    comment '新闻表';
+
+-- auto-generated definition
+create table tb_report
+(
+    id         bigint auto_increment comment 'id'
+        primary key,
+    repState   tinyint  default 0                 not null comment '报告状态（0-待审核 1-未通过 2-通过）',
+    userId     bigint                             not null comment 'id',
+    title      varchar(50)                        not null comment '报告主题',
+    content    varchar(1024)                      not null comment '报告内容',
+    createTime datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    updateTime datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    remarks    varchar(128)                       null comment '备注'
+)
+    comment '实习报告表';
+
+-- auto-generated definition
+create table tb_result
+(
+    id         bigint auto_increment comment 'id'
+        primary key,
+    reportId   bigint                             not null comment '报告id',
+    score      varchar(20)                        not null comment '实习成绩',
+    appraise   varchar(512)                       not null comment '评价',
+    createTime datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    updateTime datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    remarks    varchar(128)                       null comment '备注'
+)
+    comment '实习成绩与评价表';
+
 
 
 
