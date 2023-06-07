@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbEntTeaMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbEntTea">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbEntTea">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="entId" column="entId" jdbcType="INTEGER"/>
             <result property="entName" column="entName" jdbcType="VARCHAR"/>
@@ -29,4 +29,8 @@
         email,userRole,teaRole,
         createTime,updateTime,remarks
     </sql>
+    <select id="getSearchEntTeacherInfo" resultType="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbEntTea">
+        select * from tb_ent_tea where name like concat("%",#{name},"%") or gender like concat("%",#{gender},"%") or entLoginId like concat("%",#{entLoginId},"%")
+        or entName like concat("%",#{entName},"%");
+    </select>
 </mapper>

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbGuestbookMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbGuestbook">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbGuestbook">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="userId" column="userId" jdbcType="BIGINT"/>
             <result property="content" column="content" jdbcType="VARCHAR"/>

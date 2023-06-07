@@ -2,7 +2,7 @@ package cn.xiaobaicai.cabbage_ptms_backend.service.impl;
 
 import cn.xiaobaicai.cabbage_ptms_backend.mapper.TbReportMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbReport;
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbReport;
 import cn.xiaobaicai.cabbage_ptms_backend.service.TbReportService;
 import org.springframework.stereotype.Service;
 

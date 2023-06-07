@@ -7,7 +7,7 @@ select a.userAccount,userPassword,b.name from tb_user a,tb_stu_info b where a.us
 # select a.userAccount,userPassword,b.name from tb_user a,stu_info b where a.userAccount=b.stuId
 
 
-select a.userName,userAccount,b.creator,planName,content from tb_user a, tb_plan b where a.id=b.userId and b.id=1;
+# select a.userName,userAccount,b.creator,planName,content from tb_user a, tb_plan b where a.id=b.userId and b.id=1;
 
 
 # 查询校内实习指导老师表
@@ -25,18 +25,18 @@ select a.content,b.userId,c.userName from tb_guestbook a,tb_like_num b,tb_user c
 select a.content,b.userId from tb_guestbook a,tb_like_num b where a.id=3 and a.id=b.guestId;
 
 # 查询实习报告
-select title,content from tb_report where userId=3;
+# select title,content from tb_report where userId=3;
 
 # 修改实习报告id为3的报告状态未通过
-update tb_report set repState=1 where id=3;
+# update tb_report set repState=1 where id=3;
 
 # 查询实习报告状态为待审核
-select * from tb_report where repState=0;
+# select * from tb_report where repState=0;
 
 # 修改实习报告id为1的报告状态通过
-update tb_report set repState=2 where id=1;
+# update tb_report set repState=2 where id=1;
 
 # 查询符合打实习成绩的报告
-select a.title,content,b.score,appraise from tb_report a,tb_result b where a.repState=2 and a.id=b.reportId
+# select a.title,content,b.score,appraise from tb_report a,tb_result b where a.repState=2 and a.id=b.reportId
 
 

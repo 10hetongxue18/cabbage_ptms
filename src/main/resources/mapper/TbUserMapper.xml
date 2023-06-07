@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbUserMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbUser">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbUser">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="userName" column="userName" jdbcType="VARCHAR"/>
             <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>
@@ -14,7 +14,6 @@
             <result property="phone" column="phone" jdbcType="VARCHAR"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>
             <result property="userRole" column="userRole" jdbcType="INTEGER"/>
-            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
             <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
             <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
@@ -24,7 +23,7 @@
         id,userName,userAccount,
         userPassword,avatarUrl,gender,
         phone,email,userRole,
-        isDelete,createTime,updateTime,
-        remarks
+        createTime,updateTime,remarks
     </sql>
+
 </mapper>

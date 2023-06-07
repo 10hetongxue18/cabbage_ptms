@@ -4,11 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbStuInfoMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbStuInfo">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbStuInfo">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="gender" column="gender" jdbcType="TINYINT"/>
-            <result property="age" column="age" jdbcType="INTEGER"/>
             <result property="dateBirth" column="dateBirth" jdbcType="DATE"/>
             <result property="phone" column="phone" jdbcType="VARCHAR"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>
@@ -28,11 +27,20 @@
 
     <sql id="Base_Column_List">
         id,name,gender,
-        age,dateBirth,phone,
-        email,stuId,school,
-        faculty,major,grade,
-        classes,schTeaId,entTeaId,
-        userRole,createTime,updateTime,
-        remarks
+        dateBirth,phone,email,
+        stuId,school,faculty,
+        major,grade,classes,
+        schTeaId,entTeaId,userRole,
+        createTime,updateTime,remarks
     </sql>
+
+
+    <select id="getSearchStuInfo" resultType="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbStuInfo" >
+        select * from tb_stu_info where name like concat("%",#{name},"%") or gender like concat("%",#{gender},"%") or stuId like concat("%",#{stuId},"%");
+    </select>
+    <select id="getSearchClassInfo" resultType="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbStuInfo">
+        select * from tb_stu_info where faculty like concat("%",#{faculty},"%") or major like concat("%",#{major},"%") or grade like concat("%",#{grade},"%") or classes like concat("%",#{classes},"%");
+    </select>
+
+
 </mapper>

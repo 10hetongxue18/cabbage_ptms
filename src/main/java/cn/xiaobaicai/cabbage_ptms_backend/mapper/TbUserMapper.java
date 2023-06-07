@@ -1,14 +1,18 @@
 package cn.xiaobaicai.cabbage_ptms_backend.mapper;
 
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbStuInfo;
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbUser;
+
+import java.util.List;
 
 /**
- * @Entity generator.domain.TbUser
- * @author cabbage
  * 用户
+ * @author hetongxue
+ * @Entity cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbUser
  */
 public interface TbUserMapper extends BaseMapper<TbUser> {
+
 
 }
 

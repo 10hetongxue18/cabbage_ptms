@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbResultMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbResult">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbResult">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="reportId" column="reportId" jdbcType="BIGINT"/>
             <result property="score" column="score" jdbcType="VARCHAR"/>

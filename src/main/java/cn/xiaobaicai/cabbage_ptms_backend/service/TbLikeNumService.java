@@ -1,11 +1,11 @@
 package cn.xiaobaicai.cabbage_ptms_backend.service;
 
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbLikeNum;
 import com.baomidou.mybatisplus.extension.service.IService;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbLikeNum;
 
 /**
- *  @author cabbage
- *  留言点赞记录
+ * 留言点赞记录
+ * @author hetongxue
  */
 public interface TbLikeNumService extends IService<TbLikeNum> {
 

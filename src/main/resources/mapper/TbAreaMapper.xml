@@ -4,20 +4,20 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbAreaMapper">
 
-    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbArea">
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbArea">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="picture" column="picture" jdbcType="VARCHAR"/>
             <result property="address" column="address" jdbcType="VARCHAR"/>
-            <result property="content" column="content" jdbcType="VARCHAR"/>
             <result property="userId" column="userId" jdbcType="BIGINT"/>
             <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
             <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
     </resultMap>
 
+
     <sql id="Base_Column_List">
         id,picture,address,
-        content,userId,createTime,
-        updateTime,remarks
+        userId,createTime,updateTime,
+        remarks
     </sql>
 </mapper>

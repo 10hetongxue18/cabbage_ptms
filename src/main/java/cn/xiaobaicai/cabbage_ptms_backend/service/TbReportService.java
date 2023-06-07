@@ -1,7 +1,7 @@
 package cn.xiaobaicai.cabbage_ptms_backend.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbReport;
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbReport;
 
 /**
  * @author cabbage

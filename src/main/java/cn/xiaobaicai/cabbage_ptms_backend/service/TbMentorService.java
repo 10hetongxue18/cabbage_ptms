@@ -1,11 +1,11 @@
 package cn.xiaobaicai.cabbage_ptms_backend.service;
 
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbMentor;
 import com.baomidou.mybatisplus.extension.service.IService;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbMentor;
 
 /**
- *  @author cabbage
- *  实习指导老师
+ * 实习指导老师
+ * @author hetongxue
  */
 public interface TbMentorService extends IService<TbMentor> {
 

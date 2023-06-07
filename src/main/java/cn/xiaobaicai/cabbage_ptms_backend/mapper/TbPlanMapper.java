@@ -1,7 +1,7 @@
 package cn.xiaobaicai.cabbage_ptms_backend.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import cn.xiaobaicai.cabbage_ptms_backend.model.domain.TbPlan;
+import cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbPlan;
 
 /**
  * @Entity generator.domain.TbPlan

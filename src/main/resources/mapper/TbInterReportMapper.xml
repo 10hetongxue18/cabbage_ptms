@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xiaobaicai.cabbage_ptms_backend.mapper.TbInterReportMapper">
+
+    <resultMap id="BaseResultMap" type="cn.xiaobaicai.cabbage_ptms_backend.model.entity.TbInterReport">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="docId" column="docId" jdbcType="INTEGER"/>
+            <result property="entTeaName" column="entTeaName" jdbcType="VARCHAR"/>
+            <result property="stuTeaName" column="stuTeaName" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="INTEGER"/>
+            <result property="result" column="result" jdbcType="VARCHAR"/>
+            <result property="oneTextArea" column="oneTextArea" jdbcType="VARCHAR"/>
+            <result property="twoTextArea" column="twoTextArea" jdbcType="VARCHAR"/>
+            <result property="threeTextArea" column="threeTextArea" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,docId,entTeaName,
+        stuTeaName,state,result,
+        oneTextArea,twoTextArea,threeTextArea,
+        createTime,remarks
+    </sql>
+</mapper>

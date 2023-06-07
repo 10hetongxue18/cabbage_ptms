@@ -9,6 +9,10 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
+/**
+ * knife4j接口文档调试
+ * @author hetongxue
+ */
 @Configuration
 @EnableSwagger2WebMvc
 public class Knife4jConfiguration {
@@ -19,7 +23,7 @@ public class Knife4jConfiguration {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                 //描述字段支持Markdown语法
-                .title("毕业设计项目文档")
+                .title("毕设项目文档")
                 .description("基于web的实习实训管理系统")
                 .termsOfServiceUrl("https://github.com/10hetongxue18")
                 .version("1.0")
